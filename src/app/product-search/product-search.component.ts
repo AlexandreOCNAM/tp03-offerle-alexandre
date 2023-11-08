@@ -12,14 +12,12 @@ export class ProductSearchComponent implements OnInit{
   products: Product[] = [];
   filteredProducts: Product[] = [];
 
-  constructor(private dataService: ProductsService) { 
-    
+  constructor(private dataService: ProductsService) {
+
   }
 
   search(searchTerm: string) {
-    this.filteredProducts = this.products.filter(product => {
-      product.name.toLowerCase().includes(searchTerm.toLowerCase()) || product.description.toLowerCase().includes(searchTerm.toLowerCase()) || product.price.toString().includes(searchTerm);
-    });
+    this.filteredProducts = this.products.filter(product => product.name.toLowerCase().includes(searchTerm.toLowerCase()) || product.description.toLowerCase().includes(searchTerm.toLowerCase()));
   }
 
   ngOnInit() : void {
