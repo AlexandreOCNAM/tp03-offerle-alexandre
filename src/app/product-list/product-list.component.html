@@ -1,0 +1,12 @@
+<div *ngFor="let product of data" class="card mb-4 shadow-sm items-center bg-gray-300">
+  <h2>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h2>
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+  <img [src]="product.image" [title]="product.name">
+  <p>Price: {{product.price}}</p>
+</div>
