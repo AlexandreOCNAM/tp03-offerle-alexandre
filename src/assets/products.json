@@ -1,20 +1,38 @@
 [
   {
-    "name": "Product 1",
-    "description": "This is the first product",
+    "name": "Computer",
+    "description": "A computer",
     "price": 10.99,
-    "image": "https://picsum.photos/id/237/200/300"
+    "image": "https://picsum.photos/200/300/?random"
   },
   {
-    "name": "Product 2",
-    "description": "This is the second product",
-    "price": 19.99,
-    "image": "https://picsum.photos/id/238/200/300"
+    "name": "Headphones",
+    "description": "A pair of headphones",
+    "price": 10.99,
+    "image": "https://picsum.photos/200/300/?random"
   },
   {
-    "name": "Product 3",
-    "description": "This is the third product",
-    "price": 5.99,
-    "image": "https://picsum.photos/id/239/200/300"
+    "name": "Keyboard",
+    "description": "A keyboard",
+    "price": 10.99,
+    "image": "https://picsum.photos/200/300/?random"
+  },
+  {
+    "name": "Mouse",
+    "description": "A mouse",
+    "price": 10.99,
+    "image": "https://picsum.photos/200/300/?random"
+  },
+  {
+    "name": "Monitor",
+    "description": "A monitor",
+    "price": 10.99,
+    "image": "https://picsum.photos/200/300/?random"
+  },
+  {
+    "name": "Speakers",
+    "description": "A pair of speakers",
+    "price": 10.99,
+    "image": "https://picsum.photos/200/300/?random"
   }
 ]

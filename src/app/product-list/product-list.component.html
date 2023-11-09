@@ -1,12 +1,44 @@
-<div *ngFor="let product of data" class="card mb-4 shadow-sm items-center bg-gray-300">
-  <h2>
-    <a [title]="product.name + ' details'">
-      {{ product.name }}
-    </a>
-  </h2>
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
-  </p>
-  <img [src]="product.image" [title]="product.name">
-  <p>Price: {{product.price}}</p>
+<p>Catalogue</p>
+<br />
+<label for="recherche">Search: </label>
+<input [(ngModel)]="recherche" name="search" id="recherche"/>
+
+<br />
+<br />
+
+<hr />
+<br />
+
+<div id="container" *ngIf="produits$ | async as produits">
+  <table class="table-auto">
+    <thead class="table-header-group">
+    <tr>
+      <th>
+        <p>Name</p>
+      </th>
+      <th>
+        <p>Price</p>
+      </th>
+      <th>
+        <p>Image</p>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let p of produits | filterProduits: recherche" class="table-row">
+      <td>
+        <p>{{ p.name }}</p>
+      </td>
+      <td>
+        <p>{{ p.price }}</p>
+      </td>
+      <td>
+        <img [src]="p.image" alt="image" />
+      </td>
+    </tr>
+    </tbody>
+
+  </table>
 </div>
+
+

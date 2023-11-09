@@ -4,20 +4,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import {NgOptimizedImage} from "@angular/common";
-import { ProductComponent } from './product/product.component';
-import { ProductSearchComponent } from './product-search/product-search.component';
+import { FilterProductsPipe } from './FilterProducts.pipe';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    ProductComponent,
-    ProductSearchComponent
+    FilterProductsPipe
   ],
   imports: [
     BrowserModule,
     NgOptimizedImage,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductsService} from "../products.service";
 import { Product } from '../product';
+import {Observable} from "rxjs";
 
 
 @Component({
@@ -10,20 +11,15 @@ import { Product } from '../product';
 })
 export class ProductListComponent implements OnInit{
 
-  data: Product[] = [];
-  filteredData: Product[] = [];
+  recherche: string = "";
+  produits$: Observable<Product[]>;
 
-  constructor(private dataService: ProductsService) { }
-
-  search(searchTerm: string) {
-    this.filteredData = this.data.filter(product => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  constructor(private dataService: ProductsService) {
+    this.produits$ = dataService.getData();
   }
 
+
   ngOnInit() : void {
-    this.dataService.getData().subscribe(data => {
-      this.data = data;
-      this.filteredData = this.data;
-    }
-    );
+
   }
 }

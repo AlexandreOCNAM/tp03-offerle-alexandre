@@ -1,21 +1,2 @@
 <h1>Fantastic Angular App</h1>
-<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
-  <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-      <li class="mr-2" role="liste">
-        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="list-tab" data-tabs-target="#list" data-tabs-toggle="tab" role="tab" aria-controls="list" aria-selected="true">List</button>
-      </li>
-      <li class="mr-2" role="search">
-        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="search-tab" data-tabs-target="#search" data-tabs-toggle="tab" role="tab" aria-controls="search" aria-selected="false">Search</button>
-      </li>
-  </ul>
-</div>
-<div id="default-tab-content">
-  <div class="tab-content">
-    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="list" role="tabpanel" aria-labelledby="list-tab">
-      <app-product-list></app-product-list>
-    </div>
-    <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="search" role="tabpanel" aria-labelledby="search-tab">
-      <app-product-search></app-product-search>
-    </div>
-  </div>
-</div>
+<app-product-list></app-product-list>
